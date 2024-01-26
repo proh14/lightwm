@@ -10,7 +10,7 @@ LDFLAGS =
 
 all: $(DLL) $(EXEC)
 
-$(EXEC): wm.c
+$(EXEC): wm.c tiling.c error.c
 	$(CC) wm.c tiling.c error.c user32.lib /link /out:$(EXEC)
 
 $(DLL): wm_dll.obj
